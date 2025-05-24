@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Lista Zadań</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <h1>Lista Zadań</h1>
+    <table>
+        <tr><th>Opis</th><th>Termin</th><th>Status</th></tr>
+        {% for task in tasks %}
+        <tr><td>{{ task.description }}</td><td>{{ task.due_date }}</td><td>{{ task.status }}</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
